@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="angular-wizard.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <script type="text/javascript" src="angular-wizard.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <!-- metro css used for buttons -->
+    <link href="css3-microsoft-modern-buttons/css/m-styles.min.css" rel="stylesheet"> 
+    <link href="css3-microsoft-modern-buttons/css/bootstrap.min.css" rel="stylesheet"> 
+
+    <title>Angular-wizard</title>
+  </head>
+  <body>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner main-inner" ng-app="wizard-sample" ng-controller="WizardCtrl" ng-cloak>
+        <wizard on-finish="finished()" >
+          
+          <wz-step title="Step One">
+            <h1>Step One</h1>
+            <br>
+            <p>Check out this quick example using Angular-Wizard, Bootstrap and Microsoft modern CSS.</p>
+            <br>
+            <p>Take at the source yourself, the original developer of the wizard did a great job.</p>
+            <br>
+            <a title="Go to Step Two" wz-next class="m-btn blue pull-right" style="margin-right: 50px">Next <i class="m-icon-swapright m-icon-white"></i></a>
+          </wz-step>
+          
+          <wz-step title="Step Two">
+            <h1>Step Two</h1>
+            <br>
+            <p>It's simple to code, a wizard element contains multiple wz-step elements.</p>
+            <br>
+            <p>For navigation just add a wz-previous or wz-next attribute to a hyperlink or button.</p>
+            <br>
+            <a title="Go to Step One" wz-previous class="m-btn blue"><i class="m-icon-swapleft m-icon-white"></i> Previous</a>
+            <a title="Go to Finish" wz-next class="m-btn blue pull-right" style="margin-right: 50px">Next <i class="m-icon-swapright m-icon-white"></i></a>
+          </wz-step>
+          
+          <wz-step title="Finish">
+            <h1>Finish</h1>
+            <br>
+            <p>It really is that simple!</p>
+            <br>
+            <p>You even get the progress bar at the bottom of the wizard for free.</p>
+            <br>
+            <a title="Go to Step Two" wz-previous class="m-btn blue"><i class="m-icon-swapleft m-icon-white"></i> Previous</a>            
+          </wz-step>
+        
+        </wizard>
+      </section>
+    </div>
+
+  </body>
+</html>
